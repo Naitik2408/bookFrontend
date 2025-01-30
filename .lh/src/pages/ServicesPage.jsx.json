@@ -1,0 +1,78 @@
+{
+    "sourceFile": "src/pages/ServicesPage.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1737688867502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1737688873539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,12 @@\n const ServicesPage = () => {\n   return (\n     <div className=\"min-h-screen\">\n       <BookPublisher />\n-      <PublisherFeatures />\n+      {/* <PublisherFeatures />\n       <PublishingProcessServices />\n       <ProjectStats />\n-      <PublishingSection />\n+      <PublishingSection /> */}\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1737688882578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+// src/pages/ServicesPage.jsx\n+\n+import BookPublisher from \"../components/features/BookPublisher\";\n+// import PublisherFeatures from \"../components/features/PublisherFeatures\";\n+// import PublishingProcessServices from \"../components/features/PublishingProcessServices\";\n+// import ProjectStats from \"../components/features/ProjectStats\";\n+// import PublishingSection from \"../components/features/PublishingSection\";\n+\n+const ServicesPage = () => {\n+  return (\n+    <div className=\"min-h-screen\">\n+      {/* <BookPublisher /> */}\n+      {/* <PublisherFeatures />\n+      <PublishingProcessServices />\n+      <ProjectStats />\n+      <PublishingSection /> */}\n+    </div>\n+  );\n+};\n+\n+export default ServicesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737689113173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n-// src/pages/ServicesPage.jsx\n-\n-import BookPublisher from \"../components/features/BookPublisher\";\n+// import BookPublisher from \"../components/features/BookPublisher\";\n // import PublisherFeatures from \"../components/features/PublisherFeatures\";\n // import PublishingProcessServices from \"../components/features/PublishingProcessServices\";\n // import ProjectStats from \"../components/features/ProjectStats\";\n // import PublishingSection from \"../components/features/PublishingSection\";\n@@ -17,26 +15,5 @@\n     </div>\n   );\n };\n \n-export default ServicesPage;\n-// src/pages/ServicesPage.jsx\n-\n-import BookPublisher from \"../components/features/BookPublisher\";\n-// import PublisherFeatures from \"../components/features/PublisherFeatures\";\n-// import PublishingProcessServices from \"../components/features/PublishingProcessServices\";\n-// import ProjectStats from \"../components/features/ProjectStats\";\n-// import PublishingSection from \"../components/features/PublishingSection\";\n-\n-const ServicesPage = () => {\n-  return (\n-    <div className=\"min-h-screen\">\n-      <BookPublisher />\n-      {/* <PublisherFeatures />\n-      <PublishingProcessServices />\n-      <ProjectStats />\n-      <PublishingSection /> */}\n-    </div>\n-  );\n-};\n-\n export default ServicesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737689119897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n-// import BookPublisher from \"../components/features/BookPublisher\";\n+import BookPublisher from \"../components/features/BookPublisher\";\n // import PublisherFeatures from \"../components/features/PublisherFeatures\";\n // import PublishingProcessServices from \"../components/features/PublishingProcessServices\";\n // import ProjectStats from \"../components/features/ProjectStats\";\n // import PublishingSection from \"../components/features/PublishingSection\";\n \n const ServicesPage = () => {\n   return (\n     <div className=\"min-h-screen\">\n-      {/* <BookPublisher /> */}\n+      <BookPublisher />\n       {/* <PublisherFeatures />\n       <PublishingProcessServices />\n       <ProjectStats />\n       <PublishingSection /> */}\n"
+                },
+                {
+                    "date": 1737689677981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n-import BookPublisher from \"../components/features/BookPublisher\";\n+// import BookPublisher from \"../components/features/BookPublisher\";\n // import PublisherFeatures from \"../components/features/PublisherFeatures\";\n // import PublishingProcessServices from \"../components/features/PublishingProcessServices\";\n // import ProjectStats from \"../components/features/ProjectStats\";\n // import PublishingSection from \"../components/features/PublishingSection\";\n \n const ServicesPage = () => {\n   return (\n     <div className=\"min-h-screen\">\n-      <BookPublisher />\n+      {/* <BookPublisher /> */}\n       {/* <PublisherFeatures />\n       <PublishingProcessServices />\n       <ProjectStats />\n       <PublishingSection /> */}\n"
+                },
+                {
+                    "date": 1737690426326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n const ServicesPage = () => {\n   return (\n     <div className=\"min-h-screen\">\n-      {/* <BookPublisher /> */}\n+      <BookPublisher />\n       {/* <PublisherFeatures />\n       <PublishingProcessServices />\n       <ProjectStats />\n       <PublishingSection /> */}\n"
+                },
+                {
+                    "date": 1737690547403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-// import BookPublisher from \"../components/features/BookPublisher\";\n+import BookPublisher from \"src/components/books/BookPublisher.jsx\";\n // import PublisherFeatures from \"../components/features/PublisherFeatures\";\n // import PublishingProcessServices from \"../components/features/PublishingProcessServices\";\n // import ProjectStats from \"../components/features/ProjectStats\";\n // import PublishingSection from \"../components/features/PublishingSection\";\n"
+                },
+                {
+                    "date": 1737690560376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import BookPublisher from \"src/components/books/BookPublisher.jsx\";\n+import BookPublisher from \"../components/books/BookPublisher.jsx\";\n // import PublisherFeatures from \"../components/features/PublisherFeatures\";\n // import PublishingProcessServices from \"../components/features/PublishingProcessServices\";\n // import ProjectStats from \"../components/features/ProjectStats\";\n // import PublishingSection from \"../components/features/PublishingSection\";\n"
+                },
+                {
+                    "date": 1737690567121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import BookPublisher from \"../components/books/BookPublisher.jsx\";\n+import BookPublisher from \"\";\n // import PublisherFeatures from \"../components/features/PublisherFeatures\";\n // import PublishingProcessServices from \"../components/features/PublishingProcessServices\";\n // import ProjectStats from \"../components/features/ProjectStats\";\n // import PublishingSection from \"../components/features/PublishingSection\";\n"
+                },
+                {
+                    "date": 1737691662080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import BookPublisher from \"\";\n+import BookPublisher from \"../components/books/BookPublisher\";\n // import PublisherFeatures from \"../components/features/PublisherFeatures\";\n // import PublishingProcessServices from \"../components/features/PublishingProcessServices\";\n // import ProjectStats from \"../components/features/ProjectStats\";\n // import PublishingSection from \"../components/features/PublishingSection\";\n@@ -7,10 +7,10 @@\n const ServicesPage = () => {\n   return (\n     <div className=\"min-h-screen\">\n       <BookPublisher />\n-      {/* <PublisherFeatures />\n-      <PublishingProcessServices />\n+     <PublisherFeatures />\n+      {/*  <PublishingProcessServices />\n       <ProjectStats />\n       <PublishingSection /> */}\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1737691703676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import BookPublisher from \"../components/books/BookPublisher\";\n-// import PublisherFeatures from \"../components/features/PublisherFeatures\";\n+import PublisherFeatures from \"../components/features/PublisherFeatures\";\n // import PublishingProcessServices from \"../components/features/PublishingProcessServices\";\n // import ProjectStats from \"../components/features/ProjectStats\";\n // import PublishingSection from \"../components/features/PublishingSection\";\n \n"
+                },
+                {
+                    "date": 1737691861263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n   return (\n     <div className=\"min-h-screen\">\n       <BookPublisher />\n      <PublisherFeatures />\n-      {/*  <PublishingProcessServices />\n-      <ProjectStats />\n+      <PublishingProcessServices />\n+      {/*  <ProjectStats />\n       <PublishingSection /> */}\n     </div>\n   );\n };\n"
+                },
+                {
+                    "date": 1737692604914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import BookPublisher from \"../components/books/BookPublisher\";\n import PublisherFeatures from \"../components/features/PublisherFeatures\";\n-// import PublishingProcessServices from \"../components/features/PublishingProcessServices\";\n+import PublishingProcessServices from \"../components/features/PublishingProcess\";\n // import ProjectStats from \"../components/features/ProjectStats\";\n // import PublishingSection from \"../components/features/PublishingSection\";\n \n const ServicesPage = () => {\n"
+                },
+                {
+                    "date": 1737692887856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <div className=\"min-h-screen\">\n       <BookPublisher />\n      <PublisherFeatures />\n       <PublishingProcessServices />\n-      {/*  <ProjectStats />\n+     <ProjectStats />\n       <PublishingSection /> */}\n     </div>\n   );\n };\n"
+                },
+                {
+                    "date": 1737692898065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n import BookPublisher from \"../components/books/BookPublisher\";\n import PublisherFeatures from \"../components/features/PublisherFeatures\";\n import PublishingProcessServices from \"../components/features/PublishingProcess\";\n-// import ProjectStats from \"../components/features/ProjectStats\";\n+import ProjectStats from \"../components/features/ProjectStats\";\n // import PublishingSection from \"../components/features/PublishingSection\";\n \n const ServicesPage = () => {\n   return (\n     <div className=\"min-h-screen\">\n       <BookPublisher />\n      <PublisherFeatures />\n       <PublishingProcessServices />\n-     <ProjectStats />\n-      <PublishingSection /> */}\n+    <ProjectStats />\n+       {/*   <PublishingSection /> */}\n     </div>\n   );\n };\n \n"
+                }
+            ],
+            "date": 1737688867502,
+            "name": "Commit-0",
+            "content": "// src/pages/ServicesPage.jsx\n\nimport BookPublisher from \"../components/features/BookPublisher\";\n// import PublisherFeatures from \"../components/features/PublisherFeatures\";\n// import PublishingProcessServices from \"../components/features/PublishingProcessServices\";\n// import ProjectStats from \"../components/features/ProjectStats\";\n// import PublishingSection from \"../components/features/PublishingSection\";\n\nconst ServicesPage = () => {\n  return (\n    <div className=\"min-h-screen\">\n      <BookPublisher />\n      <PublisherFeatures />\n      <PublishingProcessServices />\n      <ProjectStats />\n      <PublishingSection />\n    </div>\n  );\n};\n\nexport default ServicesPage;"
+        }
+    ]
+}

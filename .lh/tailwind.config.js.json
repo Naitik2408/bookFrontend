@@ -1,0 +1,22 @@
+{
+    "sourceFile": "tailwind.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1737841078675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1737841087360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,17 +10,4 @@\n   plugins: [],\n }\n \n \n-// tailwind.config.js\n-module.exports = {\n-  theme: {\n-    extend: {\n-      backdropBlur: {\n-        xs: '2px',\n-      },\n-      animation: {\n-        float: 'float 6s ease-in-out infinite',\n-      }\n-    }\n-  }\n-}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1737841078675,
+            "name": "Commit-0",
+            "content": "/** @type {import('tailwindcss').Config} */\nexport default {\n  content: [\n    \"./index.html\",\n    \"./src/**/*.{js,ts,jsx,tsx}\",\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}\n\n\n// tailwind.config.js\nmodule.exports = {\n  theme: {\n    extend: {\n      backdropBlur: {\n        xs: '2px',\n      },\n      animation: {\n        float: 'float 6s ease-in-out infinite',\n      }\n    }\n  }\n}"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/Dashboard/Table.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1737920479066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1737920570274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,40 @@\n+import PropTypes from 'prop-types';\n+\n const Table = ({ books }) => (\n-    <table className=\"min-w-full bg-white\">\n-      <thead>\n-        <tr>\n-          <th className=\"py-2 px-4 border-b\">Book Name</th>\n-          <th className=\"py-2 px-4 border-b\">MRP</th>\n-          <th className=\"py-2 px-4 border-b\">Quantity Left</th>\n-          <th className=\"py-2 px-4 border-b\">Royalty Earned</th>\n-          <th className=\"py-2 px-4 border-b\">Books Sold</th>\n+  <table className=\"min-w-full bg-white\">\n+    <thead>\n+      <tr>\n+        <th className=\"py-2 px-4 border-b\">Book Name</th>\n+        <th className=\"py-2 px-4 border-b\">MRP</th>\n+        <th className=\"py-2 px-4 border-b\">Quantity Left</th>\n+        <th className=\"py-2 px-4 border-b\">Royalty Earned</th>\n+        <th className=\"py-2 px-4 border-b\">Books Sold</th>\n+      </tr>\n+    </thead>\n+    <tbody>\n+      {books.map((book, index) => (\n+        <tr key={index}>\n+          <td className=\"py-2 px-4 border-b\">{book.bookName}</td>\n+          <td className=\"py-2 px-4 border-b\">{book.mrp}</td>\n\\ No newline at end of file\n+          <td className=\"py-2 px-4 border-b\">{book.quantityLeft}</td>\n+          <td className=\"py-2 px-4 border-b\">{book.royaltyEarned}</td>\n+          <td className=\"py-2 px-4 border-b\">{book.booksSold}</td>\n         </tr>\n-      </thead>\n-      <tbody>\n-        {books.map((book, index) => (\n-          <tr key={index}>\n-            <td className=\"py-2 px-4 border-b\">{book.bookName}</td>\n-            <td className=\"py-2 px-4 border-b\">{book.mrp}</td>\n-            <td className=\"py-2 px-4 border-b\">{book.quantityLeft}</td>\n-            <td className=\"py-2 px-4 border-b\">{book.royaltyEarned}</td>\n-            <td className=\"py-2 px-4 border-b\">{book.booksSold}</td>\n-          </tr>\n-        ))}\n-      </tbody>\n-    </table>\n-  );\n-  \n-  export default Table;\n+      ))}\n+    </tbody>\n+  </table>\n+);\n+\n+Table.propTypes = {\n+  books: PropTypes.arrayOf(\n+    PropTypes.shape({\n+      bookName: PropTypes.string.isRequired,\n+      mrp: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,\n+      quantityLeft: PropTypes.number.isRequired,\n+      royaltyEarned: PropTypes.number.isRequired,\n+      booksSold: PropTypes.number.isRequired,\n+    })\n+  ).isRequired,\n+};\n+\n+export default Table;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1737920479066,
+            "name": "Commit-0",
+            "content": "const Table = ({ books }) => (\n    <table className=\"min-w-full bg-white\">\n      <thead>\n        <tr>\n          <th className=\"py-2 px-4 border-b\">Book Name</th>\n          <th className=\"py-2 px-4 border-b\">MRP</th>\n          <th className=\"py-2 px-4 border-b\">Quantity Left</th>\n          <th className=\"py-2 px-4 border-b\">Royalty Earned</th>\n          <th className=\"py-2 px-4 border-b\">Books Sold</th>\n        </tr>\n      </thead>\n      <tbody>\n        {books.map((book, index) => (\n          <tr key={index}>\n            <td className=\"py-2 px-4 border-b\">{book.bookName}</td>\n            <td className=\"py-2 px-4 border-b\">{book.mrp}</td>\n            <td className=\"py-2 px-4 border-b\">{book.quantityLeft}</td>\n            <td className=\"py-2 px-4 border-b\">{book.royaltyEarned}</td>\n            <td className=\"py-2 px-4 border-b\">{book.booksSold}</td>\n          </tr>\n        ))}\n      </tbody>\n    </table>\n  );\n  \n  export default Table;"
+        }
+    ]
+}

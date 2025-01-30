@@ -1,0 +1,22 @@
+{
+    "sourceFile": "vite.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1737730463212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1737898882492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,8 @@\n   plugins: [react()],\n   server: {\n     allowedHosts: [\n       '6f76-2405-201-5c15-894-149f-92a3-c68a-a1d2.ngrok-free.app'\n+      '27c0-2405-201-5c15-894-149f-92a3-c68a-a1d2.ngrok-free.app'\n     ]\n   }\n })\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1737730463212,
+            "name": "Commit-0",
+            "content": "import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\n\nexport default defineConfig({\n  plugins: [react()],\n  server: {\n    allowedHosts: [\n      '6f76-2405-201-5c15-894-149f-92a3-c68a-a1d2.ngrok-free.app'\n    ]\n  }\n})"
+        }
+    ]
+}

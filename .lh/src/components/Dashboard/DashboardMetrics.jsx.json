@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/Dashboard/DashboardMetrics.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1737918011361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1737918011361,
+            "name": "Commit-0",
+            "content": "const DashboardMetrics = ({ metrics }) => (\n    <div className=\"col-lg-4 col-md-4 order-1\">\n      <div className=\"row\">\n        <div className=\"col-lg-6 col-md-12 col-6 mb-4\">\n          <div className=\"card\">\n            <div className=\"card-body\">\n              <div className=\"card-title d-flex align-items-start justify-content-between\">\n                <div className=\"avatar flex-shrink-0\">\n                  <img\n                    src=\"/assets/img/icons/unicons/chart-success.png\"\n                    alt=\"chart success\"\n                    className=\"rounded\"\n                  />\n                </div>\n                <div className=\"dropdown\">\n                  <button className=\"btn p-0\" type=\"button\" id=\"cardOpt3\" data-bs-toggle=\"dropdown\">\n                    <i className=\"bx bx-dots-vertical-rounded\"></i>\n                  </button>\n                  <div className=\"dropdown-menu dropdown-menu-end\" aria-labelledby=\"cardOpt3\">\n                    <a className=\"dropdown-item\" href=\"#\">View More</a>\n                    <a className=\"dropdown-item\" href=\"#\">Delete</a>\n                  </div>\n                </div>\n              </div>\n              <span className=\"fw-medium d-block mb-1\">Total Profit</span>\n              <h3 className=\"card-title mb-2\">${metrics.profit.value}</h3>\n            </div>\n          </div>\n        </div>\n        {/* Repeat for other metrics */}\n      </div>\n    </div>\n  );\n  \n  export default DashboardMetrics;"
+        }
+    ]
+}

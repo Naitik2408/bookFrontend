@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/pages/PricingPage.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1737687042536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1737687222583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n // src/pages/PricingPage.jsx\n \n import PricingSection from \"../components/pricing/PricingSection\";\n-// import YetNotConvinced from \"../components/features/YetNotConvinced\";\n+import YetNotConvinced from \"../components/features/YetNotConvinced\";\n \n const PricingPage = () => {\n   return (\n     <div className=\"min-h-screen\">\n       <PricingSection />\n-      <YetNotConvinced />\n+      {/* <YetNotConvinced /> */}\n     </div>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1737687419568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n // src/pages/PricingPage.jsx\n \n import PricingSection from \"../components/pricing/PricingSection\";\n-import YetNotConvinced from \"../components/features/YetNotConvinced\";\n+import YetNotConvinced from \"src/components/pricing/YetNotConvinced.jsx\";\n \n const PricingPage = () => {\n   return (\n     <div className=\"min-h-screen\">\n"
+                },
+                {
+                    "date": 1737687429461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n // src/pages/PricingPage.jsx\n \n import PricingSection from \"../components/pricing/PricingSection\";\n-import YetNotConvinced from \"src/components/pricing/YetNotConvinced.jsx\";\n+import YetNotConvinced from \"./components/pricing/YetNotConvinced.jsx\";\n \n const PricingPage = () => {\n   return (\n     <div className=\"min-h-screen\">\n"
+                },
+                {
+                    "date": 1737687452338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n // src/pages/PricingPage.jsx\n \n import PricingSection from \"../components/pricing/PricingSection\";\n-import YetNotConvinced from \"./components/pricing/YetNotConvinced.jsx\";\n+import YetNotConvinced from \"./\";\n \n const PricingPage = () => {\n   return (\n     <div className=\"min-h-screen\">\n"
+                },
+                {
+                    "date": 1737687458978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n // src/pages/PricingPage.jsx\n \n import PricingSection from \"../components/pricing/PricingSection\";\n-import YetNotConvinced from \"./\";\n+import YetNotConvinced from \"..\";\n \n const PricingPage = () => {\n   return (\n     <div className=\"min-h-screen\">\n"
+                },
+                {
+                    "date": 1737687464698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n // src/pages/PricingPage.jsx\n \n import PricingSection from \"../components/pricing/PricingSection\";\n-import YetNotConvinced from \"..\";\n+import YetNotConvinced from \"../components/pricing/YetNotConvinced\";\n \n const PricingPage = () => {\n   return (\n     <div className=\"min-h-screen\">\n"
+                },
+                {
+                    "date": 1737687489475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n const PricingPage = () => {\n   return (\n     <div className=\"min-h-screen\">\n       <PricingSection />\n-      {/* <YetNotConvinced /> */}\n+     <YetNotConvinced /> */}\n     </div>\n   );\n };\n \n"
+                }
+            ],
+            "date": 1737687042536,
+            "name": "Commit-0",
+            "content": "// src/pages/PricingPage.jsx\n\nimport PricingSection from \"../components/pricing/PricingSection\";\n// import YetNotConvinced from \"../components/features/YetNotConvinced\";\n\nconst PricingPage = () => {\n  return (\n    <div className=\"min-h-screen\">\n      <PricingSection />\n      <YetNotConvinced />\n    </div>\n  );\n};\n\nexport default PricingPage;"
+        }
+    ]
+}

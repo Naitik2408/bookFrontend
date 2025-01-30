@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/layout/Header.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1737847292930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1737847298354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,28 @@\n-Parsing error: Identifier 'Link' has already been declared\n\\ No newline at end of file\n+import { Link } from 'react-router-dom';\n+import { Phone, Mail } from 'lucide-react';\n+\n+export const Header = ({ contactInfo }) => (\n+  <header className=\"bg-gradient-to-r from-[#FF6100] to-[#FEA758] text-[#FFE7C8] py-3 shadow-sm\">\n+    <div className=\"container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4\">\n+      <Link to=\"/\" className=\"flex items-center gap-3 group\">\n+        <img \n+          src=\"/src/assets/bignote-logo.png\" \n+          alt=\"Bignote Logo\" \n+          className=\"h-12 transition-transform group-hover:scale-105\"\n+        />\n+        <span className=\"text-2xl font-serif font-bold\">Bignote</span>\n+      </Link>\n+      \n+      <div className=\"flex items-center gap-6\">\n+        <div className=\"flex items-center gap-2\">\n+          <Phone size={18} />\n+          <span className=\"text-sm\">{contactInfo.phone}</span>\n+        </div>\n+        <div className=\"flex items-center gap-2\">\n+          <Mail size={18} />\n+          <span className=\"text-sm\">{contactInfo.email}</span>\n+        </div>\n+      </div>\n+    </div>\n+  </header>\n+);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1737847366805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { Link } from 'react-router-dom';\n+import PropTypes from 'prop-types';\n import { Phone, Mail } from 'lucide-react';\n \n export const Header = ({ contactInfo }) => (\n   <header className=\"bg-gradient-to-r from-[#FF6100] to-[#FEA758] text-[#FFE7C8] py-3 shadow-sm\">\n@@ -24,5 +25,12 @@\n         </div>\n       </div>\n     </div>\n   </header>\n-);\n\\ No newline at end of file\n+);\n+\n+Header.propTypes = {\n+  contactInfo: PropTypes.shape({\n+    phone: PropTypes.string.isRequired,\n+    email: PropTypes.string.isRequired\n+  }).isRequired\n+};\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1737847292930,
+            "name": "Commit-0",
+            "content": "Parsing error: Identifier 'Link' has already been declared"
+        }
+    ]
+}

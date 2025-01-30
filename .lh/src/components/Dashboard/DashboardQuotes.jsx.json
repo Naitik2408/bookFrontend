@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/Dashboard/DashboardQuotes.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1737918032655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1737918032655,
+            "name": "Commit-0",
+            "content": "const DashboardQuotes = () => (\n    <div className=\"col-md-6 col-lg-4 order-2 mb-4\">\n      <div className=\"card h-100\">\n        <div className=\"card-header d-flex align-items-center justify-content-between\">\n          <h5 className=\"card-title m-0 me-2\">Quotes</h5>\n          <div className=\"dropdown\">\n            <button className=\"btn p-0\" type=\"button\" id=\"transactionID\" data-bs-toggle=\"dropdown\">\n              <i className=\"bx bx-dots-vertical-rounded\"></i>\n            </button>\n            <div className=\"dropdown-menu dropdown-menu-end\" aria-labelledby=\"transactionID\">\n              <a className=\"dropdown-item\" href=\"#\">Last 28 Days</a>\n              <a className=\"dropdown-item\" href=\"#\">Last Month</a>\n              <a className=\"dropdown-item\" href=\"#\">Last Year</a>\n            </div>\n          </div>\n        </div>\n        <div className=\"card-body\">\n          <ul className=\"p-0 m-0 flex flex-col gap-4\">\n            <li className=\"font-semibold italic\">\n              &quot;A writer is someone for whom writing is more difficult than it is for other people.&quot; – Thomas Mann\n            </li>\n            <li className=\"font-semibold italic\">\n              &quot;The role of a writer is not to say what we all can say, but what we are unable to say.&quot; – Anaïs Nin\n            </li>\n            <li className=\"font-semibold italic\">\n              &quot;There is no greater agony than bearing an untold story inside you.&quot; – Maya Angelou\n            </li>\n            <li className=\"font-semibold italic\">\n              &quot;The scariest moment is always just before you start.&quot; – Stephen King\n            </li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  );\n  \n  export default DashboardQuotes;"
+        }
+    ]
+}
