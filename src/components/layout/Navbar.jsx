@@ -185,6 +185,7 @@ const Navbar = () => {
       });
 
       if (response.ok) {
+        localStorage.removeItem('token'); 
         dispatch(logout());
         navigate('/login');
       } else {
