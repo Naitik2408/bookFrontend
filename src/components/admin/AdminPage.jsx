@@ -54,6 +54,7 @@ function AdminPage() {
       <table className="w-full text-left border-collapse">
         <thead>
           <tr className="border-b">
+          <th className="py-2 px-4">Sr No</th>
             <th className="py-2 px-4">Username</th>
             <th className="py-2 px-4">Email</th>
             <th className="py-2 px-4">Role</th>
@@ -62,6 +63,7 @@ function AdminPage() {
         <tbody>
           {users.map((user, index) => (
             <tr key={index} className="border-b cursor-pointer" onClick={() => handleUserClick(user._id)}>
+              <td className="py-3 px-4">{index+1}</td>
               <td className="py-3 px-4">{user.username}</td>
               <td className="py-3 px-4">{user.email}</td>
               <td className="py-3 px-4">{user.role}</td>
