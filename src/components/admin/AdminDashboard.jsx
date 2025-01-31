@@ -43,10 +43,12 @@ function AdminDashboard() {
     const handleFormSubmit = async (e) => {
         e.preventDefault();
         try {
+            const token = localStorage.getItem('token');
             const response = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/dashboardDataById/${userId}/books`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'x-access-token': token ? token : '',
                 },
                 body: JSON.stringify({ books: [newBook] }),
             });
@@ -153,10 +155,12 @@ function AdminDashboard() {
 
     const handleUpdate = async () => {
         try {
+            const token = localStorage.getItem('token');
             const response = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/dashboardDataById/${userId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
+                    'x-access-token': token ? token : '',
                 },
                 credentials: 'include', // Include cookies for authentication
                 body: JSON.stringify({
