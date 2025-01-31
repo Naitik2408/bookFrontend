@@ -30,10 +30,12 @@ function App() {
   useEffect(() => {
     const verifyUserToken = async () => {
       try {
+        const token = localStorage.getItem('token');
         const response = await fetch(`${import.meta.env.VITE_API_URL}/api/users/verifyToken`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
+            'x-access-token': token ? token : '',
           },
           credentials: 'include', // Include cookies for authentication
         });
