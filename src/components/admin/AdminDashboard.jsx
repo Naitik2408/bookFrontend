@@ -70,38 +70,74 @@ function AdminDashboard() {
         }
     };
 
+    // useEffect(() => {
+    //     const fetchDashboardData = async () => {
+    //         try {
+    //             const response = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/dashboardDataById/${userId}`, {
+    //                 method: 'GET',
+    //                 headers: {
+    //                     'Content-Type': 'application/json',
+    //                 },
+    //                 credentials: 'include', // Include cookies for authentication
+    //             });
+
+    //             if (response.ok) {
+    //                 const data = await response.json();
+    //                 setDashboardData(data);
+    //                 setNewValues({
+    //                     profit: data.metrics.profit.value,
+    //                     sales: data.metrics.sales.value,
+    //                     payments: data.metrics.payments.value,
+    //                     transactions: data.metrics.transactions.value,
+    //                 });
+    //             } else {
+    //                 setError('Failed to fetch dashboard data');
+    //             }
+    //         } catch (error) {
+    //             setError('Failed to fetch dashboard data');
+    //         } finally {
+    //             setLoading(false);
+    //         }
+    //     };
+
+    //     fetchDashboardData();
+    // }, [userId]);
+
     useEffect(() => {
         const fetchDashboardData = async () => {
-            try {
-                const response = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/dashboardDataById/${userId}`, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    credentials: 'include', // Include cookies for authentication
-                });
-
-                if (response.ok) {
-                    const data = await response.json();
-                    setDashboardData(data);
-                    setNewValues({
-                        profit: data.metrics.profit.value,
-                        sales: data.metrics.sales.value,
-                        payments: data.metrics.payments.value,
-                        transactions: data.metrics.transactions.value,
-                    });
-                } else {
-                    setError('Failed to fetch dashboard data');
-                }
-            } catch (error) {
-                setError('Failed to fetch dashboard data');
-            } finally {
-                setLoading(false);
+          try {
+            const token = localStorage.getItem('token');
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/dashboardDataById/${userId}`, {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+                'x-access-token': token ? token : '',
+              },
+              credentials: 'include', // Include cookies for authentication
+            });
+      
+            if (response.ok) {
+              const data = await response.json();
+              setDashboardData(data);
+              setNewValues({
+                profit: data.metrics.profit.value,
+                sales: data.metrics.sales.value,
+                payments: data.metrics.payments.value,
+                transactions: data.metrics.transactions.value,
+              });
+            } else {
+              setError('Failed to fetch dashboard data');
             }
+          } catch (error) {
+            setError('Failed to fetch dashboard data');
+          } finally {
+            setLoading(false);
+          }
         };
-
+      
         fetchDashboardData();
-    }, [userId]);
+      }, [userId]);
+
 
     const handleChange = (e, field) => {
         const value = e.target.value;

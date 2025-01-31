@@ -661,37 +661,69 @@ export const DashboardPage = () => {
     }, [dashboardData]);
 
 
+    // useEffect(() => {
+    //     const fetchDashboardData = async () => {
+    //         try {
+    //             const response = await fetch(`${import.meta.env.VITE_API_URL}/api/dashboard/`, {
+    //                 method: 'GET',
+    //                 headers: {
+    //                     'Content-Type': 'application/json',
+    //                 },
+    //                 credentials: 'include', // Include cookies for authentication
+    //             });
+
+
+
+    //             if (!response.ok) {
+    //                 throw new Error('Failed to fetch dashboard data');
+    //             }
+
+    //             const data = await response.json();
+    //             console.log('Fetched data:', data); // Debugging log
+    //             setDashboardData(data.data); // Ensure you set the correct data structure
+    //             console.log("da   :   ", dashboardData);
+    //             setLoading(false);
+    //         } catch (error) {
+    //             console.error('Error fetching dashboard data:', error); // Debugging log
+    //             setError(error.message);
+    //             setLoading(false);
+    //         }
+    //     };
+
+    //     fetchDashboardData();
+    // }, [dispatch]);
+
     useEffect(() => {
         const fetchDashboardData = async () => {
-            try {
-                const response = await fetch(`${import.meta.env.VITE_API_URL}/api/dashboard/`, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    credentials: 'include', // Include cookies for authentication
-                });
-
-
-
-                if (!response.ok) {
-                    throw new Error('Failed to fetch dashboard data');
-                }
-
-                const data = await response.json();
-                console.log('Fetched data:', data); // Debugging log
-                setDashboardData(data.data); // Ensure you set the correct data structure
-                console.log("da   :   ", dashboardData);
-                setLoading(false);
-            } catch (error) {
-                console.error('Error fetching dashboard data:', error); // Debugging log
-                setError(error.message);
-                setLoading(false);
+          try {
+            const token = localStorage.getItem('token');
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/dashboard/`, {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+                'x-access-token': token ? token : '',
+              },
+              credentials: 'include', // Include cookies for authentication
+            });
+      
+            if (!response.ok) {
+              throw new Error('Failed to fetch dashboard data');
             }
+      
+            const data = await response.json();
+            console.log('Fetched data:', data); // Debugging log
+            setDashboardData(data.data); // Ensure you set the correct data structure
+            console.log("da   :   ", dashboardData);
+            setLoading(false);
+          } catch (error) {
+            console.error('Error fetching dashboard data:', error); // Debugging log
+            setError(error.message);
+            setLoading(false);
+          }
         };
-
+      
         fetchDashboardData();
-    }, [dispatch]);
+      }, [dispatch]);
 
 
     // Show loading state

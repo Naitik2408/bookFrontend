@@ -14,10 +14,49 @@ const LoginPage = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setLoading(true); // Set loading to true when the request starts
+
+  //   try {
+  //     // Send a POST request to the backend login endpoint
+  //     const response = await fetch(`${import.meta.env.VITE_API_URL}/api/users/loginUser`, {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       credentials: "include",
+  //       body: JSON.stringify({ email, password }),
+  //     });
+
+  //     const data = await response.json();
+      
+  //     if (response.ok) {
+  //       // Save the token to localStorage or context
+  //       console.log("login data:  ", data)
+  //       localStorage.setItem('token', data.token);
+        
+
+  //       // Dispatch the loginSuccess action with user data
+  //       dispatch(login({ user: data.user }));
+
+  //       // Redirect to the dashboard or another page
+  //       navigate('/dashboard');
+  //     } else {
+  //       // Handle login errors
+  //       setError('Invalid credentials');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error during login:', error);
+  //     setError('An error occurred. Please try again.');
+  //   } finally {
+  //     setLoading(false); // Set loading to false when the request completes
+  //   }
+  // };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true); // Set loading to true when the request starts
-
+  
     try {
       // Send a POST request to the backend login endpoint
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/users/loginUser`, {
@@ -28,7 +67,7 @@ const LoginPage = () => {
         credentials: "include",
         body: JSON.stringify({ email, password }),
       });
-
+  
       const data = await response.json();
       
       if (response.ok) {
@@ -36,10 +75,9 @@ const LoginPage = () => {
         console.log("login data:  ", data)
         localStorage.setItem('token', data.token);
         
-
         // Dispatch the loginSuccess action with user data
         dispatch(login({ user: data.user }));
-
+  
         // Redirect to the dashboard or another page
         navigate('/dashboard');
       } else {
@@ -53,7 +91,8 @@ const LoginPage = () => {
       setLoading(false); // Set loading to false when the request completes
     }
   };
-  
+
+
   return (
     <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-gradient-to-br from-orange-50 to-amber-50">
       {/* Left Section - Login Form */}
